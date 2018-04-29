@@ -8,9 +8,9 @@ import './App.css';
 class App extends Component {
   render() {
     return (<div>
-  <h1>Pizza Store</h1>
+  <h1 className="pizzaTitle"> CODAISSEUR PIZZA STORE</h1>
   <Pizzaconfigurator />
-  <ClientSelection />
+
   </div>
     );
   }

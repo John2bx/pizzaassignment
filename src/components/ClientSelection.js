@@ -13,14 +13,17 @@ class ClientSelection extends Component {
     const sauce = this.props.sauce
     const sauceprice = this.props.sauceprice
     const toppings = this.props.toppings
+    const turbodelivery = this.props.turbodelivery
+    const totalprice = baseprice+sauceprice+(toppings.length*priceTopping)
+    const pricetopay = totalprice+(totalprice*turbodelivery)
 
     return (
-      <div>
-        <p>BASE:{base}</p>
-        <p>SAUCE:{sauce}</p>
-        <p>TOPPINGS:{toppings.map(topping => <p>{topping}</p>)} PRICE:</p>
-        <p>DEVIVERY: PRICE:</p>
-        <p>TOTAL PRICE: {baseprice+sauceprice+(toppings.length*priceTopping)}</p>
+      <div className="pizzaSelection">
+        <p>BASE:</p><p>{base}</p>
+        <p>SAUCE:</p><p>{sauce}</p>
+        <p>TOPPINGS:</p>{toppings.map(topping => <p>{topping}</p>)}
+
+        <p>TOTAL PRICE: {pricetopay}</p>
       </div>
     )
   }
@@ -33,6 +36,7 @@ const mapStateToProps = (state) => {
     sauce: state.sauce,
     sauceprice: state.sauceprice,
     toppings: state.toppings,
+    turbodelivery: state.turbodelivery
 
   }
 }

@@ -3,6 +3,7 @@ import base from './base'
 import sauceprice from './sauceprice'
 import sauce from './sauce'
 import toppings from './toppings.js'
+import turbodelivery from './turbodelivery'
 
 
 
@@ -12,6 +13,7 @@ export default {
   baseprice,
   sauce,
   sauceprice,
-  toppings
+  toppings,
+  turbodelivery,
 
 }

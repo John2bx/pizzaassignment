@@ -14,6 +14,8 @@ export const sauceOptions = [
   {name: 'Mix it up!(+1.50)', price: 1.50},
 ]
 
-export const toppings= ['Pineapple', 'Corn', 'Olives(green)', 'Red onion', 'Spinach', 'Cherry tomatoes', 'Chicken']
+export const toppings= ['Pineapple', 'Corn', 'Olives(green)', 'Red onion', 'Spinach', 'Cherry tomatoes', 'Chicken',]
 
 export const priceTopping = 0.50
+
+export const turboDeliveryPrice = 0.1
