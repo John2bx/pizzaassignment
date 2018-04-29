@@ -1,4 +1,7 @@
 //this is the pricelist of the Pizzaconfigurator
+//this priceslist can be updated and the app will follow
+// You can add change prices add toppings whatever
+//The App will follow
 export const baseOptions = [
   {name: '25cm NY Style € 8,99', price: 8.99},
   {name: '30cm NY Style € 11,49', price: 11.49},
