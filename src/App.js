@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Pizzaconfigurator from './components/Pizzaconfigurator'
-import ClientSelection from './components/ClientSelection'
+
 
 
 import './App.css';

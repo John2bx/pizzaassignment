@@ -21,7 +21,7 @@ class Pizzaconfigurator extends Component {
 handleclick(event){
   event.preventDefault()
   this.setState({'order':true})
-  console.log(this.props.base)
+  
 
 }
 handleChange(event){

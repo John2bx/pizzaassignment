@@ -24,7 +24,7 @@ class SauceOptions extends Component {
     <label>
       <select onChange={this.handleChange}>
 
-      {sauceOptions.map((sauce)=>{return <option price={sauce.price} value={sauce.name}>{sauce.name}</option>})}
+      {sauceOptions.map((sauce)=>{return <option key={sauce.name} value={sauce.name}>{sauce.name}</option>})}
     </select></label>
     </div>
     );

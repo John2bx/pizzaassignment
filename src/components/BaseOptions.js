@@ -21,7 +21,7 @@ class BaseOptions extends Component {
 
     // this.setState({basename: event.target.value},
     this.props.selectBase(event.target.value)
-    
+
 
 
 
@@ -34,7 +34,7 @@ class BaseOptions extends Component {
     <label>
       <select onChange={this.handleChange}>
 
-      {baseOptions.map((base)=>{return <option value={base.name} id={base.name}>{base.name}</option>})}
+      {baseOptions.map((base)=>{return <option value={base.name} key={base.name}>{base.name}</option>})}
     </select></label>
     </div>
     );

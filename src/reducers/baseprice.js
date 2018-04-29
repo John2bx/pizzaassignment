@@ -1,4 +1,4 @@
-import {toppings, baseOptions, sauceOptions} from '../pricelist'
+import { baseOptions, } from '../pricelist'
 import {SELECT_BASE} from '../actions/index'
 
 
@@ -6,7 +6,7 @@ export default (state = 0, action) => {
   switch(action.type){
     case SELECT_BASE:{
     const searchedbase = baseOptions.filter(base =>{ return base.name === action.payload})
-    
+
     return state = searchedbase[0].price
 
   }

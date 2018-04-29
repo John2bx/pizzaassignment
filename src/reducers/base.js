@@ -1,4 +1,4 @@
-import {toppings, baseOptions, sauceOptions} from '../pricelist'
+
 import {SELECT_BASE} from '../actions/index'
 
 

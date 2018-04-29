@@ -1,4 +1,4 @@
-import {toppings, baseOptions, sauceOptions} from '../pricelist'
+import {toppings, } from '../pricelist'
 import {SELECT_TOPPINGONE, REMOVE_TOPPINGS} from '../actions/index'
 
 const initialState = []
