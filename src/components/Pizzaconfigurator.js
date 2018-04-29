@@ -1,52 +1,28 @@
 import React, { Component } from 'react';
 import BaseOptions from './BaseOptions'
 import SauceOptions from './SauceOptions'
+import Toppings from './Toppings'
 
 
 
 export default class Pizzaconfigurator extends Component {
+  handleSubmit(event) {
+   alert('An essay was submitted: ' + this.state.value);
+   event.preventDefault();
+ }
+
   render() {
     return (
 
   <div>
+  <form onSubmit={this.handleSubmit}>
   <BaseOptions />
   <SauceOptions />
-  <h1>SAUCE</h1>
-  <form onSubmit={this.handleSubmit} >
-  <label>
-    <select>
-    <option value="grapefruit">Grapefruit</option>
-    <option value="lime">Lime</option>
-    <option selected value="coconut">Coconut</option>
-    <option value="mango">Mango</option>
-  </select></label></form>
-  <h1>TOPPINGS</h1>
-  <form onSubmit={this.handleSubmit}>
-  <label>
-    <select>
-    <option value="grapefruit">Grapefruit</option>
-    <option value="lime">Lime</option>
-    <option selected value="coconut">Coconut</option>
-    <option value="mango">Mango</option>
-  </select></label></form>
-  <form onSubmit={this.handleSubmit}>
-  <label>
-    <select>
-    <option value="grapefruit">Grapefruit</option>
-    <option value="lime">Lime</option>
-    <option selected value="coconut">Coconut</option>
-    <option value="mango">Mango</option>
-  </select></label></form>
-  <form onSubmit={this.handleSubmit}>
-  <label>
-    <select>
-    <option value="grapefruit">Grapefruit</option>
-    <option value="lime">Lime</option>
-    <option selected value="coconut">Coconut</option>
-    <option value="mango">Mango</option>
-  </select></label>
+  <Toppings />
 
-  <input type ='submit' value='Submit'/>
+
+
+<input type='submit' value='Submit'/>
   </form>
 
 
