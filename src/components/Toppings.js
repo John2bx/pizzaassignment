@@ -50,7 +50,7 @@ class Toppings extends Component {
     </select></label>
 
 
-    <button onClick={this.handleclick}>REMOVE SELECTION</button>
+    <button className="TurbodroneButton" onClick={this.handleclick}>X</button>
 
 
 

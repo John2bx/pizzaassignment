@@ -12,7 +12,7 @@ import '../App.css'
 class Pizzaconfigurator extends Component {
   constructor(props){
     super(props);
-    this.state = {'order': false,}
+    this.state = {'order': 'pending',}
 
    this.handleclick = this.handleclick.bind(this)
    this.handleChange = this.handleChange.bind(this)
@@ -20,8 +20,13 @@ class Pizzaconfigurator extends Component {
 
 handleclick(event){
   event.preventDefault()
-  this.setState({'order':true})
-  
+  if(this.props.base[0] && this.props.sauce[0] && this.props.toppings[0]){return this.setState({'order': 'placed'})}
+  else {this.setState({'order':'wrong'})}
+  // if(!this.props.sauce){return null}
+  // if(!this.props.toppings){return null}
+  //
+  // this.setState({'order':true})
+
 
 }
 handleChange(event){
@@ -29,7 +34,7 @@ handleChange(event){
 }
 
 
-  render() { if (this.state.order === false){
+  render() { if (this.state.order === 'pending' || this.state.order === 'wrong'){
     return (
 
   <div className = "PizzaPage">
@@ -50,9 +55,19 @@ handleChange(event){
 </div>
     );
   }
-else{return <h1>YOUR ORDER HAS BEEN PLACED!</h1>}}
+else if (this.state.order){return <h1>YOUR ORDER HAS BEEN PLACED!</h1>}}
 }
 
+const mapStateToProps = (state) => {
+  return {
+    base: state.base,
+    baseprice: state.baseprice,
+    sauce: state.sauce,
+    sauceprice: state.sauceprice,
+    toppings: state.toppings,
+    turbodelivery: state.turbodelivery
 
+  }
+}
 
-export default connect(null, {changeTurboDelivery})(Pizzaconfigurator)
+export default connect(mapStateToProps, {changeTurboDelivery})(Pizzaconfigurator)
